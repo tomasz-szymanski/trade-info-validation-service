@@ -1,6 +1,7 @@
 package com.cs.trade.info;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.Date;
 
 public class TradeInfo {
@@ -14,11 +15,12 @@ public class TradeInfo {
     private String ccyPair;
     private TradeType type;
     private TradeDirection direction;
-    private Date tradeDate;
+    private LocalDate tradeDate;
+	private LocalDate valueDate;
     private BigDecimal amount1;
     private BigDecimal amount2;
     private BigDecimal rate;
-    private Date valueDate;
+
     private String legalEntity;
     private String trader;
 
@@ -54,14 +56,6 @@ public class TradeInfo {
         this.direction = direction;
     }
 
-    public Date getTradeDate() {
-        return tradeDate;
-    }
-
-    public void setTradeDate(Date tradeDate) {
-        this.tradeDate = tradeDate;
-    }
-
     public BigDecimal getAmount1() {
         return amount1;
     }
@@ -86,14 +80,6 @@ public class TradeInfo {
         this.rate = rate;
     }
 
-    public Date getValueDate() {
-        return valueDate;
-    }
-
-    public void setValueDate(Date valueDate) {
-        this.valueDate = valueDate;
-    }
-
     public String getLegalEntity() {
         return legalEntity;
     }
@@ -109,4 +95,20 @@ public class TradeInfo {
     public void setTrader(String trader) {
         this.trader = trader;
     }
+
+	public LocalDate getTradeDate() {
+		return tradeDate;
+	}
+
+	public void setTradeDate(LocalDate tradeDate) {
+		this.tradeDate = tradeDate;
+	}
+
+	public LocalDate getValueDate() {
+		return valueDate;
+	}
+
+	public void setValueDate(LocalDate valueDate) {
+		this.valueDate = valueDate;
+	}
 }
