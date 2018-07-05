@@ -1,7 +1,14 @@
-create sequence CURRENCY_SEQ start with 1 increment by 1;
+create sequence TRANSACTION_STYLE_SEQ start with 1 increment by 1;
 
-insert into CUSTOMER values (1, 'PLUTO1');
-insert into CUSTOMER values (2, 'PLUTO2');
+insert into TRANSACTION_STYLE values (TRANSACTION_STYLE_SEQ.nextval, 'EUROPEAN');
+insert into TRANSACTION_STYLE values (TRANSACTION_STYLE_SEQ.nextval, 'AMERICAN');
+
+create sequence CUSTOMER_SEQ start with 1 increment by 1;
+
+insert into CUSTOMER values (CUSTOMER_SEQ.nextval, 'PLUTO1');
+insert into CUSTOMER values (CUSTOMER_SEQ.nextval, 'PLUTO2');
+
+create sequence CURRENCY_SEQ start with 1 increment by 1;
 
 INSERT INTO CURRENCY(id, entity, name, ALPHA_CODE, NUMERIC_CODE) VALUES (CURRENCY_SEQ.nextVal,'AFGHANISTAN','Afghani','AFN','971');
 INSERT INTO CURRENCY(id, entity, name, ALPHA_CODE, NUMERIC_CODE) VALUES (CURRENCY_SEQ.nextVal,'ÅLAND ISLANDS','Euro','EUR','978');

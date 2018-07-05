@@ -12,10 +12,14 @@ public class SupportedCustomerValidator {
 
     private Set<String> supportedCustomers;
 
-    @Autowired
-    private CustomerRepository customerRepository;
+    private final CustomerRepository customerRepository;
 
-    @PostConstruct
+	@Autowired
+	public SupportedCustomerValidator(CustomerRepository customerRepository) {
+		this.customerRepository = customerRepository;
+	}
+
+	@PostConstruct
     private void init() {
         supportedCustomers = customerRepository.findAll().stream().map(Customer::getName).collect(Collectors.toSet());
     }
