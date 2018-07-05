@@ -105,4 +105,20 @@ public class TradeInfo {
         this.valueDate = valueDate;
     }
 
+    @Override
+    public String toString() {
+        return "TradeInfo{" +
+                "customer='" + customer + '\'' +
+                ", ccyPair='" + ccyPair + '\'' +
+                ", type=" + type +
+                ", direction=" + direction +
+                ", tradeDate=" + tradeDate +
+                ", valueDate=" + valueDate +
+                ", amount1=" + amount1 +
+                ", amount2=" + amount2 +
+                ", rate=" + rate +
+                ", legalEntity='" + legalEntity + '\'' +
+                ", trader='" + trader + '\'' +
+                '}';
+    }
 }

@@ -99,16 +99,16 @@ public class TradeInfoOption extends TradeInfo {
 	@Override
 	public String toString() {
 		return "TradeInfoOption{" +
-			"style='" + style + '\'' +
-			", strategy='" + strategy + '\'' +
-			", deliveryDate=" + deliveryDate +
-			", expiryDate=" + expiryDate +
-			", excerciseStartDate=" + excerciseStartDate +
-			", payCcy='" + payCcy + '\'' +
-			", premium=" + premium +
-			", premiumCcy='" + premiumCcy + '\'' +
-			", premiumType='" + premiumType + '\'' +
-			", premiumDate=" + premiumDate +
-			'}';
+				"style='" + style + '\'' +
+				", strategy='" + strategy + '\'' +
+				", deliveryDate=" + deliveryDate +
+				", expiryDate=" + expiryDate +
+				", excerciseStartDate=" + excerciseStartDate +
+				", payCcy='" + payCcy + '\'' +
+				", premium=" + premium +
+				", premiumCcy='" + premiumCcy + '\'' +
+				", premiumType='" + premiumType + '\'' +
+				", premiumDate=" + premiumDate +
+				"} " + super.toString();
 	}
 }

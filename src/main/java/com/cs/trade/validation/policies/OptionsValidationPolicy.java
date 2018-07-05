@@ -23,8 +23,6 @@ public class OptionsValidationPolicy {
 	public ValidationResult validate(TradeInfoOption tradeInfoOption) {
 
 		ValidationResult result = new ValidationResult();
-//		result.setInfo(tradeInfo);
-
 		boolean isStyleValid = styleValidator.isValid(tradeInfoOption.getStyle());
 		if (!isStyleValid) {
 			result.addMessage("Style is not valid: " + tradeInfoOption.getStyle());

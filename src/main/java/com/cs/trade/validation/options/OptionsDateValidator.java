@@ -3,7 +3,7 @@ package com.cs.trade.validation.options;
 import java.time.LocalDate;
 
 /**
- * - expiry date and premium date shall be before delivery date
+ * Expiry date and premium date shall be before delivery date
  */
 public class OptionsDateValidator {
 

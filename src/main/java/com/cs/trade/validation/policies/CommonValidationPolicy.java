@@ -41,7 +41,7 @@ public class CommonValidationPolicy {
 
         boolean currencyFromIsValid = currencyValidator.isValid(currencyFrom);
         if(!currencyFromIsValid){
-        	result.addMessage("CurrencyFrom is not valid:" + currencyFrom);
+        	result.addMessage("CurrencyFrom is not valid: " + currencyFrom);
 		}
         boolean currencyToIsValid = currencyValidator.isValid(currencyTo);
 		if(!currencyToIsValid){
