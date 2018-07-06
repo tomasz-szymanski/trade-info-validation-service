@@ -6,6 +6,9 @@ mvn clean install
 mvn clean package
 java -jar target/trade-info-validation-service-0.0.1-SNAPSHOT.jar
 
+### Documenation of avaialble services in Swagger
+- http://localhost:8001/swagger-ui.html#/
+
 ### Validaton service available under port 8001
 - http://localhost:8001/trade-info/validate
 - http://localhost:8001/trade-info/validate/multiple
