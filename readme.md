@@ -7,10 +7,15 @@ mvn clean package
 
 java -jar target/trade-info-validation-service-0.0.1-SNAPSHOT.jar
 
-### Documenation of avaialble services in Swagger
+### Graceful shutdown
+```
+curl -X POST http://localhost:8001/actuator/shutdown
+```
+
+### Documentation of available services in Swagger
 - http://localhost:8001/swagger-ui.html#/
 
-### Validaton service available under port 8001
+### Validation service available under port 8001
 - http://localhost:8001/trade-info/validate
 - http://localhost:8001/trade-info/validate/multiple
 - http://localhost:8001/trade-info/validate/multiple/array
@@ -87,5 +92,5 @@ Sample JSON:
 
 ## More test data
 More test data can be found in prepred HTTP Requests collection which can be run directly from IntelliJ Idea
-- https://github.com/tomasz-szymanski/trade-info-validation-service/blob/master/src/main/resources/sample-post-request.http
-- https://github.com/tomasz-szymanski/trade-info-validation-service/blob/master/src/main/resources/sample-post-request-bulk.http
+- https://github.com/tomasz-szymanski/trade-info-validation-service/blob/master/src/test/resources/sample-post-request.http
+- https://github.com/tomasz-szymanski/trade-info-validation-service/blob/master/src/test/resources/sample-post-request-bulk.http

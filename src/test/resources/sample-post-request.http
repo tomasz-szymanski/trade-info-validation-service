@@ -377,3 +377,8 @@ Content-Type: application/json
     "trader": "Johann Baumfiddler"
   }
 ###
+
+### Send POST request with json body
+POST http://localhost:8001/actuator/shutdown
+
+###
