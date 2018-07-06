@@ -1,0 +1,81 @@
+== Build
+mvn clean install
+
+== Run
+mvn clean package
+java -jar target/trade-info-validation-service-0.0.1-SNAPSHOT.jar
+
+== Validation endpoints
+Service available under: http://localhost:8001
+
+http://localhost:8001/trade-info/validate
+
+{[/trade-info/validate],methods=[POST]}	- validate single trade info
+
+http://localhost:8001/trade-info/validate/multiple
+
+{[/trade-info/validate/multiple],methods=[POST]} - validate multiple trade infos. Sample JSON:
+
+{
+"tradeInfos": [
+    {
+        "customer":"PLUTO1",
+        "ccyPair":"EURUSD",
+        "type":"Spot",
+        "direction":"BUY",
+        "tradeDate":"2016-08-11",
+        "amount1":1000000.00,
+        "amount2":1120000.00,
+        "rate":1.12,
+        "valueDate":"2016-08-15",
+        "legalEntity":"CS Zurich",
+        "trader":"Johann Baumfiddler"
+    },
+    {
+        "customer": "PLUTO1",
+        "ccyPair": "EURUSD",
+        "type": "Spot",
+        "direction": "BUY",
+        "tradeDate": "2016-08-11",
+        "amount1": 1000000.00,
+        "amount2": 1120000.00,
+        "rate": 1.12,
+        "valueDate": "2016-08-15",
+        "legalEntity": "CS Zurich",
+        "trader": "Johann Baumfiddler"
+    }
+]
+
+http://localhost:8001/trade-info/validate/multiple/array
+{[/trade-info/validate/multiple/array],methods=[POST]} -  validate multiple trade infos. Sample JSON:
+
+[
+    {
+        "customer":"PLUTO1",
+        "ccyPair":"EURUSD",
+        "type":"Spot",
+        "direction":"BUY",
+        "tradeDate":"2016-08-11",
+        "amount1":1000000.00,
+        "amount2":1120000.00,
+        "rate":1.12,
+        "valueDate":"2016-08-15",
+        "legalEntity":"CS Zurich",
+        "trader":"Johann Baumfiddler"
+    },
+    {
+        "customer": "PLUTO1",
+        "ccyPair": "EURUSD",
+        "type": "Spot",
+        "direction": "BUY",
+        "tradeDate": "2016-08-11",
+        "amount1": 1000000.00,
+        "amount2": 1120000.00,
+        "rate": 1.12,
+        "valueDate": "2016-08-15",
+        "legalEntity": "CS Zurich",
+        "trader": "Johann Baumfiddler"
+    }
+]    
+
+
