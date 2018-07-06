@@ -4,6 +4,7 @@ mvn clean install
 
 ### Run
 mvn clean package
+
 java -jar target/trade-info-validation-service-0.0.1-SNAPSHOT.jar
 
 ### Documenation of avaialble services in Swagger
