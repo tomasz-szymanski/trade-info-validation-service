@@ -14,16 +14,16 @@ import org.springframework.stereotype.Component;
 @Component
 public class OptionsStyleValidator {
 
-	private Set<String> supportedTransaction;
 	private final TransactionStyleRepository repository;
 
 	@Autowired
 	public OptionsStyleValidator(TransactionStyleRepository repository) {
 		this.repository = repository;
-		supportedTransaction = repository.findAll().stream().map(TransactionStyle::getName).collect(Collectors.toSet());
 	}
 
 	public boolean isValid(String transactionStyle) {
+		final Set<String> supportedTransaction = repository.findAll().stream().map(TransactionStyle::getName).collect
+			(Collectors.toSet());
 		return supportedTransaction.contains(transactionStyle);
 	}
 
